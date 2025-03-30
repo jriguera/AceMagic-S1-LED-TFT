@@ -1,0 +1,3 @@
+[submodule "acemagic-S1-panel-conf"]
+	path = acemagic-S1-panel-conf
+	url = https://github.com/Piero24/acemagic-S1-panel-conf.git
