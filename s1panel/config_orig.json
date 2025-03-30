@@ -1,14 +1,14 @@
 {
-   "listen": "0.0.0.0:8686",
-   "theme": "themes/main/landscape_main.json",
+   "listen": "127.0.0.1:8686",
+   "theme": "themes/simple_demo/portrait_simple.json",
    "poll": 500,
    "refresh": 1600,
    "heartbeat": 60000,
    "debug_update": false,
    "theme_list": [
       {
-         "name": "Piero24 Custom Theme",
-         "config": "themes/main/landscape_main.json"
+         "name": "a simple demo portrait orientation",
+         "config": "themes/simple_demo/portrait_simple.json"
       }
    ],
    "sensors": [
@@ -28,7 +28,7 @@
          "module": "sensors/cpu_temp.js",
          "config": {
             "max_points": 300,
-            "fahrenheit": false
+            "fahrenheit": true
          }
       },
       {
@@ -40,20 +40,27 @@
       {
          "module": "sensors/network.js",
          "config": {
-            "interface": "enp1s0",
+            "interface": "enp2s0",
             "max_points": 300
          }
       },
       {
          "module": "sensors/network.js",
          "config": {
-            "interface": "wlp2s0",
+            "interface": "enp4s0",
             "max_points": 300
          }
       },
       {
          "module": "sensors/memory.js",
          "config": {
+            "max_points": 300
+         }
+      },
+      {
+         "module": "sensors/space.js",
+         "config": {
+            "mount_point": "/",
             "max_points": 300
          }
       }
@@ -75,7 +82,7 @@
    "device": "1-8:1.1",
    "led_config": {
       "device": "/dev/ttyUSB0",
-      "theme": 1,
+      "theme": 2,
       "speed": 3,
       "intensity": 3
    },
